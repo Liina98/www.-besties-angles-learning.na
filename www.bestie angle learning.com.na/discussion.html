@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Teaching Angle Properties in Parallel Lines</title>
+  <link rel="stylesheet" href="index.css">  
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .activity-container {
+        text-align: center;
+        margin: 20px auto;
+        border: 1px solid #ddd;
+        padding: 20px;
+        max-width: 400px;
+    }
+
+    label, span {
+        margin: 0 10px;
+    }
+
+    .activity-display {
+        font-weight: bold;
+    }
+
+.feedback {
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+    
+
+        <nav>
+             
+              <ul>
+                  
+                <li><a href="index.html">Home</a></li>
+                <li><a href="introduction.html">Introduction</a></li>
+            <li><a href="parallel-lines">Parallel lines</a></li>
+            <li><a href="angle-types.html">Angle types</a></li>
+            <li><a href="practice.html">Practice</a></li>
+            <li><a href="discussion.html">Group Discussion</a></li>
+
+              </ul>
+        </nav>
+        <section id="discussion"></section>
+        <h1>Angle Properties Group Discussion</h1>
+        <section class="activity-container">
+            <h2>Group Discussion: Angle Properties in Parallel Lines</h2>
+            <p>Discuss the angle properties in parallel lines, including alternate interior angles, alternate exterior angles, corresponding angles, and supplementary angles, with your group members.</p>
+            <p>What are the key concepts and relationships you have identified or not identified
+                ?</p>
+            <textarea id="groupDiscussion" rows="4" cols="50" placeholder="Enter your discussion here"></textarea>
+            <button id="checkButton">Share Discussion</button>
+            <p class="feedback" id="feedback"></p>
+        </section>
+    
+        <script>
+            const groupDiscussion = document.getElementById('groupDiscussion');
+            const checkButton = document.getElementById('checkButton');
+            const feedback = document.getElementById('feedback');
+    
+            checkButton.addEventListener('click', () => {
+                const discussionText = groupDiscussion.value.trim();
+                const expectedKeywords = ['alternate interior angles', 'alternate exterior angles', 'corresponding angles', 'supplementary angles'];
+    
+                const missingKeywords = expectedKeywords.filter(keyword => !discussionText.includes(keyword));
+    
+                if (missingKeywords.length === 0) {
+                    feedback.textContent = 'Great discussion! You covered all key concepts.';
+                } else {
+                    feedback.textContent = 'Oops! Your discussion is missing the following key concepts: ' + missingKeywords.join(', ');
+                }
+            });
+        </script>
+            
+</body>
+</html>

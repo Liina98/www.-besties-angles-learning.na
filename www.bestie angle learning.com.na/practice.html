@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Teaching Angle Properties in Parallel Lines</title>
+  <link rel="stylesheet" href="practice.css">
+  <style>
+    /* CSS styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+    }
+
+    section {
+        background-color: #f9f9f9;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 5px;
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    .practice-problem {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .practice-problem img {
+        max-width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    .practice-problem p {
+            margin-top: 10px;
+        }
+
+</style>
+</head>
+<body>
+    <nav>
+             
+        <ul>
+            
+          <li><a href="index.html">Home</a></li>
+          <li><a href="introduction.html">Introduction</a></li>
+      <li><a href="parallel-lines">Parallel lines</a></li>
+      <li><a href="angle-types.html">Angle types</a></li>
+      <li><a href="practice.html">Practice</a></li>
+      <li><a href="discussion.html">Group Discussion</a></li>
+ 
+        </ul>
+      </nav>
+      <section id="practice">
+        <h2>Practice Problems</h2>
+        <p>Test your knowledge by solving the following practice problems related to angle properties in parallel lines:</p>
+
+        <div class="practice-problem">
+            <h3>Problem 1</h3>
+            <p>Find the measure of angle B in the figure below.</p>
+            <img src="./assets/practrical 1 (1).jpg" alt="Practice Problem 1"  width="250" height="200"/>
+            <input type="text" id="answer1" placeholder="Your Answer">
+            <button onclick="checkAnswer(1)">Check Answer</button>
+            <p id="result1"></p>
+        </div>
+
+        <div class="practice-problem">
+            <h3>Problem 2</h3>
+            <p>Identify the type of angle formed between lines A and B in the figure below. Is it alternate interior, corresponding, supplementary, or vertical?</p>
+            <img src="./assets/practrical 1 (2).jpg" alt="Practice Problem 2"  width="200" height="200" />
+            <input type="text" id="answer2" placeholder="Your Answer">
+            <button onclick="checkAnswer(2)">Check Answer</button>
+            <p id="result2"></p>
+        </div>
+
+        <div class="practice-problem">
+            <h3>Problem 3</h3>
+            <p>Calculate the measure of angle X in the following diagram.</p>
+            <img src="./assets/practrical 1 (3).jpg" alt="Practice Problem 3" />
+            <input type="text" id="answer3" placeholder="Your Answer">
+            <button onclick="checkAnswer(3)">Check Answer</button>
+            <p id="result3"></p>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript code
+        function checkAnswer(problemNumber) {
+            const answer = document.getElementById(`answer${problemNumber}`).value;
+            const resultElement = document.getElementById(`result${problemNumber}`);
+            
+            if (problemNumber === 1) {
+                const correctAnswer = 90;
+                if (parseInt(answer) === correctAnswer) {
+                    resultElement.textContent = 'Correct!';
+                    resultElement.style.color = 'green';
+                } else {
+                    resultElement.textContent = 'Incorrect. Try again.';
+                    resultElement.style.color = 'red';
+                }
+            } else if (problemNumber === 2) {
+                const correctAnswer = 'alternate interior';
+                if (answer.toLowerCase() === correctAnswer) {
+                    resultElement.textContent = 'Correct!';
+                    resultElement.style.color = 'green';
+                } else {
+                    resultElement.textContent = 'Incorrect. Try again.';
+                    resultElement.style.color = 'red';
+                }
+            } else if (problemNumber === 3) {
+                const correctAnswer = 130;
+                if (parseInt(answer) === correctAnswer) {
+                    resultElement.textContent = 'Correct!';
+                    resultElement.style.color = 'green';
+                } else {
+                    resultElement.textContent = 'Incorrect. Try again.';
+                    resultElement.style.color = 'red';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
+      
